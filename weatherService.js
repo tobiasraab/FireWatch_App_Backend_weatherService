@@ -1,10 +1,12 @@
 //-------------------------------------------------------------------------------------environment variables
 if (process.env.NODE_ENV == 'production') {
-    require('dotenv').config({ path: './../.env' });
+    console.log("hi")
+    require('dotenv').config({ path: './.env' });
 }
 
 // DB_URI => Mongo DB Database Uri
 const dbUri = process.env.DB_URI
+console.log(dbUri)
 
 // OW_APIKEY => get free API Key from https://openweathermap.org/price
 const apiKey = process.env.OW_APIKEY
@@ -40,7 +42,6 @@ dbclient.connect(err => {
 //----------------------------------------------------------------------------------------funcions
 function getForest(){
     forestData.find().forEach((dbres) => {
-
         let latitude
         let longitude
         
