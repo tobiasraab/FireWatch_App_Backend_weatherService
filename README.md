@@ -58,7 +58,7 @@ https://github.com/tobiasraab/FireWatch_APP_Backend_databaseService
 // weatherService.js
 1) OpenWeather API call:
    ```
-      'https://api.openweathermap.org/data/2.5/weather?lat=<latitude>&lon=<longitude>6&units=metric&appid=2f824ee8874eba3b2235a537340b9a22'
+      'https://api.openweathermap.org/data/2.5/weather?lat=<LATITUDE>&lon=<LONGITUDE>6&units=metric&appid=<API_KEY>'
    ```
    (OpenWeather https://openweathermap.org/)
 2) save API response in database collection 'weather'
