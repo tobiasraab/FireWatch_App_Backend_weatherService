@@ -24,21 +24,16 @@ const dbclient = new MongoClient(uri, {
 })
 let db
 let weatherData
-
-
-let userData
 let forestData
-let weatherData
-let sensorData
 
 
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------main
 dbclient.connect(err => {
-    console.log("Database Service connected to Database: FireWatch")
+    console.log("Connected to Database FireWatch - Collection: 'weather'")
     db = dbclient.db("FireWatch")
-    userData = db.collection("userData")
-    forestData = db.collection("forests")
     weatherData = db.collection("weather")
-    sensorData = db.collection("sensorData")
+    forestData = db.collection("forests")
+    getForest()
 })
 
 
@@ -85,13 +80,3 @@ function apiWeatherCall(dbres, lat, lon){
             }
       })
 }
-
-
-//--------------------------------------------------------------------------------------------------------------------------------------------------------------------main
-dbclient.connect(err => {
-    console.log("Connected to Database FireWatch - Collection: 'weather'")
-    db = dbclient.db("FireWatch")
-    weatherData = db.collection("weather")
-    forestData = db.collection("forests")
-    getForest()
-})
