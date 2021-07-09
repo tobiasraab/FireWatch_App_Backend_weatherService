@@ -1,6 +1,5 @@
 //-------------------------------------------------------------------------------------environment variables
 /* if (process.env.NODE_ENV == 'production') {
-    console.log("hi")
     require('dotenv').config({ path: './.env' });
 } */
 
@@ -20,7 +19,7 @@ const axios = require('axios')
 //Mongo DB
 const MongoClient = require('mongodb').MongoClient
 const uri = dbUri
-const dbclient = new MongoClient(process.env.DB_URI, {
+const dbclient = new MongoClient(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
