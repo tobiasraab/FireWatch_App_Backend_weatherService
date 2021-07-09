@@ -4,11 +4,11 @@
 } */
 
 // DB_URI => Mongo DB Database Uri
-const dbUri = process.env.DB_URI
+const dbUri = process.env.DB_URI.toString()
 console.log(dbUri)
 
 // OW_APIKEY => get free API Key from https://openweathermap.org/price
-const apiKey = process.env.OW_APIKEY
+const apiKey = process.env.OW_APIKEY.toString()
 
 
 
