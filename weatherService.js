@@ -20,7 +20,7 @@ const axios = require('axios')
 //Mongo DB
 const MongoClient = require('mongodb').MongoClient
 const uri = dbUri
-const dbclient = new MongoClient(uri, {
+const dbclient = new MongoClient(process.env.DB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
