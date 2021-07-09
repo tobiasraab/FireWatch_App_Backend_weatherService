@@ -26,6 +26,21 @@ let db
 let weatherData
 
 
+let userData
+let forestData
+let weatherData
+let sensorData
+
+
+dbclient.connect(err => {
+    console.log("Database Service connected to Database: FireWatch")
+    db = dbclient.db("FireWatch")
+    userData = db.collection("userData")
+    forestData = db.collection("forests")
+    weatherData = db.collection("weather")
+    sensorData = db.collection("sensorData")
+})
+
 
 //----------------------------------------------------------------------------------------funcions
 function getForest(){
