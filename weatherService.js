@@ -1,8 +1,8 @@
 //-------------------------------------------------------------------------------------environment variables
-if (process.env.NODE_ENV == 'production') {
+/* if (process.env.NODE_ENV == 'production') {
     console.log("hi")
     require('dotenv').config({ path: './.env' });
-}
+} */
 
 // DB_URI => Mongo DB Database Uri
 const dbUri = process.env.DB_URI
